@@ -1,0 +1,244 @@
+<html>
+
+<head>
+
+    <title>Tencent gaming buddy clone - electron</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/fontaw.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div class="container preventSelect">
+
+            <div class="menu_container">
+
+                    <li>Update</li>
+                    <li>Feedback</li>
+                    <li>Setting</li>
+                    <li>Diagnosis</li>
+    
+                </div>
+
+        <div class='titleBar'>
+
+            <div class="titleContainer draggable">
+
+                <img src="img/ico.png">
+
+                Tencent Gaming Buddy - Beta
+
+            </div>
+
+            
+
+            <div class="windowControls">
+                
+                <button id='optionButton'><i class="fas fa-bars"></i></button>
+                
+                <button id='minimizeButton'> <i class="far fa-window-minimize"></i></button>
+                <button id='quitButton'><i class="fas fa-times"></i> </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="mainContainer">
+
+            <div class="leftPanel">
+
+                <div id='login_selector'>
+
+                    <img src='img/tencent_icon.PNG'>
+
+                    <span>Login</span>
+
+                </div>
+
+                <div id='games_selector' class="tab_selected" onclick="toggleTabs(id)">
+
+                    <img src='img/games.png'>
+
+                    <span>My Games</span>
+
+                </div>
+
+                <div id='center_selector' onclick="toggleTabs(id)">
+
+                    <img src='img/game_center.png'>
+
+                    <span>Game Center</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="centerPanel">
+
+                <div id="games_container">
+
+                    <div class="background_container">
+
+                        <div class="overlay"></div>
+
+                    </div>
+
+                    <div class="myGamesContainer">
+
+                        <p>My Games</p>
+
+                        <div id="heroContainer" class="heroContainer">
+
+                            <span class='dropSpan'><img class='drop' src='img/drop.PNG'></span>
+
+                            <span class='characterSpan'> <img class='character' src='img/character.png'></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="center_container">
+
+                    <div class="gameCenterContainer">
+
+
+                        <div class="cover">
+
+                            <img src="img/games_icon/cover.png">
+
+                        </div>
+
+
+                        <p>Recommended</p>
+
+                        <div class="gamesGrid">
+
+
+                            <div class="row">
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/pubg_game.png">
+                                    <div class='name'>PUBG MOBILE</div>
+                                    <div class='bar'><span>FPS</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/honokai.png">
+                                    <div class='name'>Honokai Impact 3</div>
+                                    <div class='bar'><span>FTG</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/arena.png">
+                                    <div class='name'>Arena of Valor</div>
+                                    <div class='bar'><span>MOBA</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/legends.png">
+                                    <div class='name'>Mobile Legends</div>
+                                    <div class='bar'><span>MOBA</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/ragnarok.png">
+                                    <div class='name'>Ragnarok M</div>
+                                    <div class='bar'><span>MMORPG</span></div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/subway.png">
+                                    <div class='name'>Subway Surf</div>
+                                    <div class='bar'><span>Arcade</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/ludo.png">
+                                    <div class='name'>Ludo King <sup>TM</sup></div>
+                                    <div class='bar'><span>FTG</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/royale.png">
+                                    <div class='name'>Clash Royale</div>
+                                    <div class='bar'><span>Strategy</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/coc.png">
+                                    <div class='name'>Clash Of Clans</div>
+                                    <div class='bar'><span>Strategy</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/clask_of_kings.png">
+                                    <div class='name'>Clash Of Kings</div>
+                                    <div class='bar'><span>Strategy</span></div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/lords_mobile.png">
+                                    <div class='name'>Lords Mobile</div>
+                                    <div class='bar'><span>RPG</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/yulgang.png">
+                                    <div class='name'>Yulgang Mobile</div>
+                                    <div class='bar'><span>MMORPG</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/idle_heroes.png">
+                                    <div class='name'>Idle Heroes</div>
+                                    <div class='bar'><span>RPG</span></div>
+                                </div>
+
+                                <div class='column'>
+                                    <img class='img' src="img/games_icon/zingspeed.png">
+                                    <div class='name'>ZingSpeed Mobile</div>
+                                    <div class='bar'><span>RAC</span></div>
+                                </div>
+
+                            </div>
+
+                       
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+   
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "electron-pubg",
+  "version": "1.0.0",
+  "description": "Building a pubg inspired screen",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ronak Punase",
+  "license": "ISC"
+}
